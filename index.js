@@ -41,6 +41,8 @@ console.log(firstName ?? lastName ?? nickName ?? "Supercoder");   // Supercoder
 
 
 // Comparison with ||
+// **************************************
+
 // The OR || operator can be used in the same way as ??
 
 // For example, in the code above we could replace ?? with || and still get the same result:
@@ -61,3 +63,13 @@ console.log(height ?? 100); // 0
 
 // In practice, the zero height is often a valid value, that shouldn’t be replaced with the default. So ?? does just the right thing.
 
+// Using ?? with && or ||
+// **************************************
+
+// Due to safety reasons, JavaScript forbids using ?? together with && and || operators, unless the precedence is explicitly specified with parentheses.
+
+// let x = 1 && 2 ?? 3;  // Error: Unexpected token '??'
+
+// Use explicit parentheses to work around it:
+let x = (1 && 2) ?? 3;
+console.log(x); // 2;

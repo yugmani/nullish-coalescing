@@ -2,8 +2,6 @@
 import './style.css';
 
 // Write Javascript code!
-const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 // Nullish coalescing operator '??'
 // ************************************************
@@ -26,19 +24,18 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 //example 1
 let user;
-console.log(user ?? "Anonymous");     // Anonymous
+console.log(user ?? 'Anonymous'); // Anonymous
 
-user = "John";
-console.log(user ?? "Anonymous");     // John
+user = 'John';
+console.log(user ?? 'Anonymous'); // John
 
 //example 2
 let firstName = null;
 let lastName = null;
-let nickName = "Supercoder";
+let nickName = 'Supercoder';
 
 //shows the first defined value;
-console.log(firstName ?? lastName ?? nickName ?? "Supercoder");   // Supercoder
-
+console.log(firstName ?? lastName ?? nickName ?? 'Supercoder'); // Supercoder
 
 // Comparison with ||
 // **************************************
@@ -46,14 +43,14 @@ console.log(firstName ?? lastName ?? nickName ?? "Supercoder");   // Supercoder
 // The OR || operator can be used in the same way as ??
 
 // For example, in the code above we could replace ?? with || and still get the same result:
-console.log(firstName || lastName || nickName || "Anonymous");  // Supercoder
+console.log(firstName || lastName || nickName || 'Anonymous'); // Supercoder
 
 // The important difference between them is that:
 
 //1. || returns the first truthy value.
 //2. ?? returns the first defined value.
 
-// In other words, || doesn’t distinguish between false, 0, an empty string "" and null/undefined. 
+// In other words, || doesn’t distinguish between false, 0, an empty string "" and null/undefined.
 // They are all the same – falsy values. If any of these is the first argument of ||, then we’ll get the second argument as the result.
 // In practice though, we may want to use default value only when the variable is null/undefined. That is, when the value is really unknown/not set.
 
@@ -73,3 +70,23 @@ console.log(height ?? 100); // 0
 // Use explicit parentheses to work around it:
 let x = (1 && 2) ?? 3;
 console.log(x); // 2;
+
+// ********************************************
+// https://devdojo.com/smpnjn/what-is-nullish-coalescing-or-in-javascript
+// ********************************************
+
+//Is it set to zero(0)?
+let x1 = 0 ?? 'Hello';
+console.log('x1: ', x1); //x1: 0
+
+//Is set to goodbye?
+let y1 = undefined ?? 'goodbye';
+console.log('y1: ', y1); //y1: goodbye
+
+//Is set to hello
+let z1 = null ?? 'hello';
+console.log('z1: ', z1); //z1: hello
+
+//Is set to false?
+let a1 = false ?? 'See you later.';
+console.log('a1: ', a1); //a1: false

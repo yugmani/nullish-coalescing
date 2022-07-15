@@ -155,3 +155,18 @@ console.log('x7: ', x7); //x7: Default Text
 
 let y7 = undefined || 'Default Text';
 console.log('y7: ', y7); //y7: Default Text
+
+//Chaining the nullish coalescing operator
+// ****************************************
+
+//is set to "default text"
+let m = null ?? undefined ?? 'default text';
+console.log('m: ', m); //default text
+
+//Errors
+// let n = 0 || undefined ?? 'default text';
+// Error: Unexpected token '??'
+
+//Retuns 'default text'
+let p = (0 || undefined) ?? 'default text';
+console.log('p: ', p); //p: default text

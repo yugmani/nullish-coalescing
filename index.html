@@ -15,7 +15,38 @@
       code. For example, a function that returns undefined in some situations
       can be provided with a <code class="highlight">default</code> value.
     </li>
-    <li></li>
-    <li></li>
+    <h3>
+      Differences between the logical OR operator and Nullish Coalescing
+      operator
+    </h3>
+    <ul>
+      <li>
+        <h4>Falsy Values</h4>
+        <ol>
+          <li><strong>false</strong></li>
+          <li>
+            <strong>0</strong> or <strong>-0</strong> or <strong>0n</strong>
+          </li>
+          <li><strong>empty string</strong> i.e. ""</li>
+          <li><strong>null</strong></li>
+          <li><strong>undefined</strong></li>
+          <li><strong>NaN</strong></li>
+        </ol>
+      </li>
+      <li>
+        In the past, We typically set default values in JavaScript using the
+        logical <strong>OR || </strong>operator.
+      </li>
+      <li>
+        The <strong>||</strong> operator returns the right hand value if the
+        left hand value is <strong>falsy</strong>(any of six falsy value).
+      </li>
+      <li>
+        In the other hand, the nullish coalescing operator
+        <strong>??</strong> triggers if a value is <strong>null</strong> or
+        <strong>undefined</strong>. Because, it considers other falsy values a
+        valid values.
+      </li>
+    </ul>
   </ul>
 </div>

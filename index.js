@@ -109,3 +109,49 @@ let coalescingFunction = (a) => {
 //Will return 'goodbye world', since the `coalescingFunction(4)` returns undefined.
 let coalescingValue = coalescingFunction(4) ?? 'goodbye world';
 console.log(coalescingValue); //goodbye world
+
+//Differences between the logical OR operator and Nullish Coalescing operator
+// ********************************************
+
+//Is set to 0
+let x2 = 0 ?? 5;
+console.log('x2: ', x2); //x2: 0
+
+//Is set to 5
+let y2 = 0 || 5;
+console.log('y2: ', y2); //y2: 5;
+
+//Is set to ""
+let x3 = '' ?? 'Default Text';
+console.log('x3: ', x3); //x3:
+
+let y3 = '' || 'Default Text';
+console.log('y3: ', y3); //y3: Default Text
+
+//Is set to false
+let x4 = false ?? 'Default Text';
+console.log('x4: ', x4); //x4: false
+
+let y4 = false || 'Default Text';
+console.log('y4: ', y4); //y4: Default Text
+
+//Is set to NaN
+let x5 = NaN ?? 'Default Text';
+console.log('x5: ', x5); //x5: null
+
+let y5 = NaN || 'Default Text';
+console.log('y5: ', y5); //y5: Default Text
+
+//Is set to null
+let x6 = null ?? 'Default Text';
+console.log('x6: ', x6); //x6: Default Text
+
+let y6 = null || 'Default Text';
+console.log('y6: ', y6); //y6: Default Text
+
+//Is set to undefined
+let x7 = undefined ?? 'Default Text';
+console.log('x7: ', x7); //x7: Default Text
+
+let y7 = undefined || 'Default Text';
+console.log('y7: ', y7); //y7: Default Text

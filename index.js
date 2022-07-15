@@ -90,3 +90,22 @@ console.log('z1: ', z1); //z1: hello
 //Is set to false?
 let a1 = false ?? 'See you later.';
 console.log('a1: ', a1); //a1: false
+
+let b1 = '' ?? 'Nothing!';
+console.log('b1: ', b1); //b1:
+
+let d1 = true ?? 'Something';
+console.log('d1: ', d1); //d1: true
+
+let e1 = 'Dell' ?? 'Apple';
+console.log('e1: ', e1); //e1: Dell
+
+let coalescingFunction = (a) => {
+  if (a >= 5) {
+    return 'hello world';
+  }
+};
+
+//Will return 'goodbye world', since the `coalescingFunction(4)` returns undefined.
+let coalescingValue = coalescingFunction(4) ?? 'goodbye world';
+console.log(coalescingValue); //goodbye world
